@@ -1,0 +1,19 @@
+# Virtual environments
+nr-eventpush/venv/
+nr-eventpush/env/
+nr-eventpush/.env/
+nr-sampleapp/venv/
+nr-sampleapp/env/
+nr-sampleapp/.env/
+
+# config files
+nr-sampleapp/config.ini
+nr-sampleapp/newrelic.ini
+nr-eventpush/config.ini
+nr/eventpush/newrelic.ini
+.DS_Store
+
+nr-eventpush/bin
+nr-eventpush/lib
+nr-sampleapp/bin
+nr-sampleapp/lib
