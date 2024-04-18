@@ -20,7 +20,7 @@ url = "https://api.newrelic.com/graphql"
 
 # Payload for the GraphQL query, fetching BrowserInteraction events
 payload = json.dumps({
-  "query": "{\n  actor {\n    account(id: "+NR_ACCOUNT_ID+") {\n      nrql(query: \"SELECT * FROM BrowserInteraction WHERE entityGuid = '"+NR_ENTITY_GUID+"' AND sessionTraceId IS NOT NULL SINCE 2 hour ago\") {\n        results\n      }\n    }\n  }\n}",
+  "query": "{\n  actor {\n    account(id: "+NR_ACCOUNT_ID+") {\n      nrql(query: \"SELECT * FROM BrowserInteraction WHERE entityGuid = '"+NR_ENTITY_GUID+"' AND sessionTraceId IS NOT NULL SINCE 4 hour ago\") {\n        results\n      }\n    }\n  }\n}",
   "variables": ""
 })
 
