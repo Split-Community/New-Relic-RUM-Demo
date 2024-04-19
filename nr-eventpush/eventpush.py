@@ -31,7 +31,7 @@ headers = {
 }
 
 # Send a POST request to the New Relic API
-response = requests.request("POST", url, headers=headers, data=payload, verify=False)
+response = requests.request("POST", url, headers=headers, data=payload)
 print('recieved events response from newrelic')  # Log that the response has been received
 
 print(response.text)  # Print the text of the response
@@ -105,7 +105,7 @@ for chunk in chunks:
 
         
     # Send a POST request to the Split.io API
-    response = requests.request("POST", url, headers=headers, data=payload, verify=False)
+    response = requests.request("POST", url, headers=headers, data=payload)
     print(response.text)  # Print the text of the response
     # If the response status code is not 200, print the response text and break the loop
     if(response.status_code != 200):
