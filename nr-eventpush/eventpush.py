@@ -11,7 +11,7 @@ config.read('config.ini')
 
 # Get the values
 NR_ACCOUNT_ID = config.get('DEFAULT', 'NR_ACCOUNT_ID')
-NR_ENTITY_GUID = config.get('DEFAULT', 'NR_ENTITY_GUID')
+NR_APP_NAME = config.get('DEFAULT', 'NR_APP_NAME')
 NR_API_KEY = config.get('DEFAULT', 'NR_API_KEY')
 SPLIT_API_KEY = config.get('DEFAULT', 'SPLIT_API_KEY')
 
@@ -20,7 +20,7 @@ url = "https://api.newrelic.com/graphql"
 
 # Payload for the GraphQL query, fetching BrowserInteraction events
 payload = json.dumps({
-  "query": "{\n  actor {\n    account(id: "+NR_ACCOUNT_ID+") {\n      nrql(query: \"SELECT * FROM BrowserInteraction WHERE entityGuid = '"+NR_ENTITY_GUID+"' AND sessionTraceId IS NOT NULL SINCE 4 hour ago\") {\n        results\n      }\n    }\n  }\n}",
+  "query": "{\n  actor {\n    account(id: "+NR_ACCOUNT_ID+") {\n      nrql(query: \"SELECT * FROM BrowserInteraction WHERE appName = '"+NR_APP_NAME+"' AND sessionTraceId IS NOT NULL SINCE 4 hour ago\") {\n        results\n      }\n    }\n  }\n}",
   "variables": ""
 })
 
