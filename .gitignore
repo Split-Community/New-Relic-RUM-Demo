@@ -1,19 +1,20 @@
 # Virtual environments
-nr-eventpush/venv/
-nr-eventpush/env/
-nr-eventpush/.env/
-nr-sampleapp/venv/
-nr-sampleapp/env/
-nr-sampleapp/.env/
+.env/
+venv/
+.venv/
+
+pyvenv.cfg
 
 # config files
 nr-sampleapp/config.ini
 nr-sampleapp/newrelic.ini
+nr-sampleapp/pyvenv.cfg
 nr-eventpush/config.ini
 nr/eventpush/newrelic.ini
+nr-eventpush/pyvenv.cfg
 .DS_Store
 
-nr-eventpush/bin
-nr-eventpush/lib
-nr-sampleapp/bin
-nr-sampleapp/lib
+bin/
+lib/
+share
+lib64
